@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мини-диагностика | Дизайн Человека</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="quiz">
+  <main class="app">
+    <section id="landing-screen" class="screen active fade-in">
+      <div id="hero-cover" class="hero-cover" role="img" aria-label="Обложка квиза">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1 id="landing-title">Где я живу из долга, а где из отклика</h1>
+          <p id="landing-subtitle">
+            Мини-диагностика для тех, кто устал тащить всё на себе и хочет вернуть себе внутреннее “да” и “нет”
+          </p>
+          <button id="start-btn" class="btn btn-primary hero-btn">Пройти тест</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz-screen" class="screen">
+      <div class="quiz-head">
+        <p id="question-counter" class="counter"></p>
+        <div class="progress-wrap" aria-label="Прогресс прохождения">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+      <h2 id="question-text" class="question"></h2>
+      <div id="answers-list" class="answers"></div>
+    </section>
+
+    <section id="lead-screen" class="screen">
+      <h2>Почти готово!</h2>
+      <p class="subtitle">
+        Заполни форму ниже чтобы получить рекомендации и понять где ты правда устаёшь не от жизни, а от чужих ожиданий, чужого темпа, чужих эмоций и роли “хорошей девочки”.
+      </p>
+      <form id="lead-form" class="lead-form" novalidate>
+        <label for="name-input">Имя</label>
+        <input id="name-input" type="text" maxlength="80" placeholder="Как к вам обращаться" required />
+        <label for="telegram-input">Никнейм Telegram</label>
+        <input id="telegram-input" type="text" maxlength="80" placeholder="@username" required />
+        <label for="email-input">Эл. почта</label>
+        <input id="email-input" type="email" maxlength="120" placeholder="example@mail.com" required />
+        <p id="form-error" class="error-text" aria-live="polite"></p>
+        <button type="submit" class="btn btn-primary">Получить результат</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
